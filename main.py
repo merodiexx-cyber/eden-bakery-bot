@@ -160,9 +160,10 @@ def main():
     # Инлайн-кнопки
     application.add_handler(CallbackQueryHandler(button_handler))
     
-    # Запускаем бота
+      # Запускаем бота
     logger.info("Бот пекарни 'Эдем' запущен...")
     application.run_polling()
 
-if __name__ == '__main__':
-    
+if __name__ == "__main__":
+    # здесь должен быть отступ на следующей строке
+    main()  # или другой код
