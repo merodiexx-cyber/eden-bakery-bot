@@ -1,4 +1,18 @@
 import logging
+import sys
+
+# Настройка логирования
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+try:
+    # Весь ваш текущий код бота здесь
+    # ...
+    logger.info("Бот успешно запущен")
+except Exception as e:
+    logger.error(f"Ошибка при запуске бота: {e}")
+    sys.exit(1)
+import logging
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 from config import BOT_TOKEN
