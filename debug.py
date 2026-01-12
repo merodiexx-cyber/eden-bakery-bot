@@ -8,7 +8,7 @@ print(f"Files in directory: {os.listdir('.')}")
 
 print("\n=== Checking imports ===")
 try:
-    import aiogram
+    import aiogram  # <-- исправлено написание (было alogram)
     print(f"✓ aiogram imported, version: {aiogram.__version__}")
 except Exception as e:
     print(f"✗ Error importing aiogram: {e}")
